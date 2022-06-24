@@ -1,4 +1,5 @@
 import { randomWord, generateButtons, guessWord } from "./generateFunction.js";
+import { selectGuess, gameWon, gameLost } from "./checkers.js";
 
 const words = [
     'programm',
@@ -13,11 +14,11 @@ const words = [
     'school'
 ];
 
-let word = '';
-let guess = [];
-let wordH = null;
-let mistakes = 1;
-let maxWrong = 4;
+export let word = '';
+export let guess = [];
+export let wordH = null;
+export let mistakes = 1;
+export let maxWrong = 4;
 
 
 
@@ -33,34 +34,34 @@ let maxWrong = 4;
 
 
 
-function selectGuess(selectLetter) {
-  guess.indexOf(selectLetter) === -1 ? guess.push(selectLetter) : null;
-  document.getElementById(selectLetter).setAttribute('disabled', '');
+// function selectGuess(selectLetter) {
+//   guess.indexOf(selectLetter) === -1 ? guess.push(selectLetter) : null;
+//   document.getElementById(selectLetter).setAttribute('disabled', '');
 
-  if (word.indexOf(selectLetter) >= 0) {
-  guessWord();
-  gameWon(); 
-  } else if (word.indexOf(selectLetter) === -1) {
-    mistakes++;
-    gameLost();
-    updateHangmanImg();
-    }
-} 
+//   if (word.indexOf(selectLetter) >= 0) {
+//   guessWord();
+//   gameWon(); 
+//   } else if (word.indexOf(selectLetter) === -1) {
+//     mistakes++;
+//     gameLost();
+//     updateHangmanImg();
+//     }
+// } 
 
 
 
-function gameWon() {
-  if (wordH === word) {
-    document.getElementById('keyboard').innerHTML = 'You Won!';
-  }
-}
+// function gameWon() {
+//   if (wordH === word) {
+//     document.getElementById('keyboard').innerHTML = 'You Won!';
+//   }
+// }
 
-function gameLost() {
-  if (mistakes === maxWrong) {
-    document.getElementById('word').innerHTML = 'The answer: ' + word;
-    document.getElementById('keyboard').innerHTML = 'You Lose!';
-  }
-}
+// function gameLost() {
+//   if (mistakes === maxWrong) {
+//     document.getElementById('word').innerHTML = 'The answer: ' + word;
+//     document.getElementById('keyboard').innerHTML = 'You Lose!';
+//   }
+// }
 
 // function generateButtons() {
 //   let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
