@@ -15,3 +15,4 @@ export function guessWord() {
 
   document.getElementById('word').innerHTML = wordH;
 }
+

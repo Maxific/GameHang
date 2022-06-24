@@ -1,16 +1,4 @@
-// Требования
-// 1. Должен существовать пул из 10 слов +
-// 2. Слово назначается случайным образом +
-// 3. После трех ошибок игра заканчивается проигрышом (показываем попап)
-// 4. Если слово отгадано раньше чем 3 ошибки, игра заканчивается выйгрышем
-// 5. Если в слове несколько одинаковых букв - показать все сразу
-// 6. Если пользователь вводит букву которая уже открыта, то ничего не происходит
-
-// Что делать
-// 1. Декомпозируем задачу
-// 2. Заводите репу (1 мейнтейнер, 1 форкает)
-// 3. Распределяете задачи
-// 4. Работаем по веткам
+import { randomWord, generateButtons, guessWord } from "./generateFunction.js";
 
 const words = [
     'programm',
@@ -33,15 +21,15 @@ let maxWrong = 4;
 
 
 
-function randomWord() {
-    word = words[Math.floor(Math.random() * words.length)];
-}
+// function randomWord() {
+//     word = words[Math.floor(Math.random() * words.length)];
+// }
 
-function guessWord() {
-  wordH = word.split('').map(letter => (guess.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+// function guessWord() {
+//   wordH = word.split('').map(letter => (guess.indexOf(letter) >= 0 ? letter : " _ ")).join('');
 
-  document.getElementById('word').innerHTML = wordH;
-}
+//   document.getElementById('word').innerHTML = wordH;
+// }
 
 
 
@@ -74,13 +62,13 @@ function gameLost() {
   }
 }
 
-function generateButtons() {
-  let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
-    `<button id = '` + letter + `'onClick="selectGuess('` + letter + `')"> ` + letter + ` </button>`).join(' ');
+// function generateButtons() {
+//   let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+//     `<button id = '` + letter + `'onClick="selectGuess('` + letter + `')"> ` + letter + ` </button>`).join(' ');
 
-  document.getElementById('keyboard').innerHTML = buttonsHTML;
+//   document.getElementById('keyboard').innerHTML = buttonsHTML;
 
-}
+// }
 
 function updateHangmanImg() {
   document.getElementById('man').src = './img/' + mistakes + '.png';
