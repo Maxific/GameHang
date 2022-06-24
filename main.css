@@ -62,6 +62,7 @@ h1{
 	font-size: 20px;
 	font-weight: 200;
     text-align: center;
+    border-radius: 50%;
 
 	color: black;
     background-color: #fff;
@@ -95,10 +96,12 @@ h1{
     font-size: 30px;
     color: blueviolet;
     text-align: center;
+    
     box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
 }
 
 .popup-container button:hover {
+    border-radius: 50%;
 	transition: all 0.2s;
 	box-shadow: 0 7px 14px rgba(7, 234, 22, 0.1), 0 3px 6px rgb(0 0 0 / 8%);
 }
