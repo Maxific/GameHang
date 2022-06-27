@@ -34,10 +34,10 @@ export let maxWrong = 4;
 
 
 
-// function selectGuess(selectLetter) {
-//   guess.indexOf(selectLetter) === -1 ? guess.push(selectLetter) : null;
-//   document.getElementById(selectLetter).setAttribute('disabled', '');
-
+export function selectGuess(selectLetter) {
+  guess.indexOf(selectLetter) === -1 ? guess.push(selectLetter) : null;
+  document.getElementById(selectLetter).setAttribute('disabled', '');
+}
 //   if (word.indexOf(selectLetter) >= 0) {
 //   guessWord();
 //   gameWon(); 
@@ -91,4 +91,3 @@ playButton.addEventListener('click', playAgain);
 randomWord();
 generateButtons();
 guessWord();
-
