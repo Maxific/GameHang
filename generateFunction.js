@@ -1,3 +1,5 @@
+import { selectGuess } from "./checkers";
+
 export function randomWord() {
     word = words[Math.floor(Math.random() * words.length)];
 }
@@ -15,3 +17,4 @@ export function guessWord() {
 
   document.getElementById('word').innerHTML = wordH;
 }
+
