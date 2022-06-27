@@ -1,5 +1,5 @@
 import { randomWord, generateButtons, guessWord } from "./generateFunction.js";
-import { selectGuess, gameWon, gameLost } from "./checkers.js";
+import { selectGuess } from "./checkers.js";
 
 const words = [
     'programm',
