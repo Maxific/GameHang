@@ -36,6 +36,7 @@ let maxWrong = 4;
 export function selectGuess(selectLetter) {
   guess.indexOf(selectLetter) === -1 ? guess.push(selectLetter) : null;
   document.getElementById(selectLetter).setAttribute('disabled', '');
+<<<<<<< HEAD
 
   if (word.indexOf(selectLetter) >= 0) {
   guessWord();
@@ -46,6 +47,18 @@ export function selectGuess(selectLetter) {
     updateHangmanImg();
     }
 } 
+=======
+}
+//   if (word.indexOf(selectLetter) >= 0) {
+//   guessWord();
+//   gameWon(); 
+//   } else if (word.indexOf(selectLetter) === -1) {
+//     mistakes++;
+//     gameLost();
+//     updateHangmanImg();
+//     }
+// } 
+>>>>>>> checker
 
 
 
@@ -90,4 +103,3 @@ playButton.addEventListener('click', playAgain);
 randomWord();
 generateButtons();
 guessWord();
-

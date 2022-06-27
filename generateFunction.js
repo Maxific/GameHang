@@ -11,7 +11,7 @@ export function randomWord() {
 }
 
 
-function selectGuess(selectLetter) {
+export function selectGuess(selectLetter) {
   let mistakes = 1;
 
   guess.indexOf(selectLetter) === -1 ? guess.push(selectLetter) : null;
@@ -40,5 +40,6 @@ export function guessWord() {
   wordH = word.split('').map(letter => (guess.indexOf(letter) >= 0 ? letter : " _ ")).join('');
 
   document.getElementById('word').innerHTML = wordH;
+  return wordH;
 }
 
