@@ -1,10 +1,11 @@
-import { words } from "./index.js";
+import { words } from "./constants.js";
 import { gameLost, gameWon } from "./checkers.js" 
 import { updateHangmanImg } from "./updater.js"
 
-
+let wordH = null;
 let word = '';
 let guess = [];
+export let mistakes = 1;
 
 export function randomWord() {
     word = words[Math.floor(Math.random() * words.length)];
@@ -12,7 +13,7 @@ export function randomWord() {
 
 
 export function selectGuess(selectLetter) {
-  let mistakes = 1;
+  
 
   guess.indexOf(selectLetter) === -1 ? guess.push(selectLetter) : null;
   document.getElementById(selectLetter).setAttribute('disabled', '');
@@ -36,10 +37,19 @@ export function generateButtons() {
 }
 
 export function guessWord() {
-  let wordH = null;
+
   wordH = word.split('').map(letter => (guess.indexOf(letter) >= 0 ? letter : " _ ")).join('');
 
   document.getElementById('word').innerHTML = wordH;
-  return wordH;
+}
+
+export function playAgain() {
+  mistakes = 1;
+  guess = [];
+  document.getElementById('man').src = './img/1.png'
+
+  randomWord();
+  generateButtons();
+  guessWord();
 }
 
