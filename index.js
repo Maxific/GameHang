@@ -33,7 +33,7 @@ let maxWrong = 4;
 
 
 
-function selectGuess(selectLetter) {
+export function selectGuess(selectLetter) {
   guess.indexOf(selectLetter) === -1 ? guess.push(selectLetter) : null;
   document.getElementById(selectLetter).setAttribute('disabled', '');
 
