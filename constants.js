@@ -1,9 +1,9 @@
 import { updateHangmanImg } from "./updater.js";
 import { gameWon, gameLost } from "./checkers.js";
+import { randomWord } from "./generateFunction.js";
 
 const playButton = document.getElementById('play-button');
 playButton.addEventListener('click', playAgain);
-
 
 
 export const words = [
@@ -19,15 +19,9 @@ export const words = [
     'hacker'
 ];
 
-export let word = '';
-export let guess = [];
-export let wordH = null;
-export let mistakes = 1;
+
 export const maxWrong = 4;
 
-function randomWord() {
-  word = words[Math.floor(Math.random() * words.length)];
-}
 
 function guessWord() {
   wordH = word.split('').map(letter => (guess.indexOf(letter) >= 0 ? letter : " _ ")).join('');
