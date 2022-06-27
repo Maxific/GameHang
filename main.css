@@ -7,3 +7,104 @@
     box-sizing: border-box;
 }
 
+h1{
+    width: 360px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 300;
+    color: blue;
+}
+
+.game-container{
+    width: 1200px;
+    height: 100vh;
+}
+
+.manImg{
+    width: 800px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.manImg img{
+    width: 800px;
+    height: 700px;
+}
+
+.word{
+    width: 350px;
+    height: 120px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.keyboard{
+    width: 800px;
+    height: 180px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.keyboard button{
+    padding: 0 10px 5px 10px; 
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid rgb(8, 8, 8);
+	font-size: 20px;
+	font-weight: 200;
+    text-align: center;
+    border-radius: 50%;
+
+	color: black;
+    background-color: #fff;
+	box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+    
+    
+}
+
+.keyboard button:disabled{
+	background-color: #eee;
+	border-color: #eee;
+	color: #444;
+	cursor: not-allowed;
+}
+
+.keyboard button:hover {
+	transition: all 0.2s;
+	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+
+.popup-container{
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.popup-container button{
+    border: 3px solid rgb(8, 8, 8);
+    padding: 10px 15px 10px 15px;
+    font-size: 30px;
+    color: blueviolet;
+    text-align: center;
+    
+    box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+}
+
+.popup-container button:hover {
+    border-radius: 50%;
+	transition: all 0.2s;
+	box-shadow: 0 7px 14px rgba(7, 234, 22, 0.1), 0 3px 6px rgb(0 0 0 / 8%);
+}
+
+
+
