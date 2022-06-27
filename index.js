@@ -1,17 +1,17 @@
 import { randomWord, generateButtons, guessWord } from "./generateFunction.js";
-import { selectGuess } from "./checkers.js";
+import { playAgain } from "./updater.js";
 
 const words = [
     'programm',
-    'car',
-    'body',
-    'health',
-    'building',
-    'helicopter',
+    'css',
+    'python',
+    'html',
+    'byte',
+    'algorithm',
     'computer',
-    'monkey',
-    'dog',
-    'school'
+    'database',
+    'developer',
+    'hacker'
 ];
 
 export let word = '';
@@ -71,19 +71,19 @@ export let maxWrong = 4;
 
 // }
 
-function updateHangmanImg() {
-  document.getElementById('man').src = './img/' + mistakes + '.png';
-}
+// function updateHangmanImg() {
+//   document.getElementById('man').src = './img/' + mistakes + '.png';
+// }
 
-function playAgain() {
-  mistakes = 1;
-  guess = [];
-  document.getElementById('man').src = './img/1.png'
+// function playAgain() {
+//   mistakes = 1;
+//   guess = [];
+//   document.getElementById('man').src = './img/1.png'
 
-  randomWord();
-  generateButtons();
-  guessWord();
-}
+//   randomWord();
+//   generateButtons();
+//   guessWord();
+// }
 
 const playButton = document.getElementById('play-button');
 playButton.addEventListener('click', playAgain);

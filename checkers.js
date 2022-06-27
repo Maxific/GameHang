@@ -1,5 +1,6 @@
 import { guessWord } from "./generateFunction";
 import { mistakes, guess, word, wordH, maxWrong } from "./index.js";
+import { updateHangmanImg } from "./updater";
 
 
 
